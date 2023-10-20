@@ -1,0 +1,41 @@
+<apex:page standardController="Account" extensions="AccountController">
+    <apex:form >
+        <apex:pageBlock title="Account Details">
+            <!-- Account Details Fields -->
+            <apex:pageBlockSection >
+                <apex:inputField value="{!Account.Name}"/>
+                <apex:inputField value="{!Account.AccountNumber}"/>
+                <apex:inputField value="{!Account.Type}"/>
+                
+                <apex:inputField value="{!Account.Phone}"/>
+                <apex:inputField value="{!Account.Fax}"/>
+            </apex:pageBlockSection>
+        </apex:pageBlock>
+
+        <apex:pageBlock title="Related Contacts">
+            <apex:pageBlockButtons location="top">
+                <apex:commandButton value="Save" action="{!save}"/>
+                <apex:commandButton value="Cancel" action="{!cancel}"/>
+            </apex:pageBlockButtons>
+
+            <apex:pageBlockTable value="{!Contacts}" var="con">
+                <apex:column headerValue="Name">
+                    <apex:outputText value="{!con.Name}"/>
+                </apex:column>
+                <apex:column headerValue="Title">
+                    <apex:outputText value="{!con.Title}"/>
+                </apex:column>
+                <apex:column headerValue="Phone">
+                    <apex:outputText value="{!con.Phone}"/>
+                </apex:column>
+                <apex:column headerValue="Primary Contact">
+                    <apex:outputField value="{!con.Primary_Contact__c}"/>
+                </apex:column>
+            </apex:pageBlockTable>
+        </apex:pageBlock>
+
+        
+    </apex:form>
+
+   
+</apex:page>
