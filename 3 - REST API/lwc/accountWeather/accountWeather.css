@@ -1,0 +1,20 @@
+.weather-container {
+    text-align: center;
+    background-color: #abebf5;
+    padding: 10px;
+    border: 1px solid #cccccc83;
+}
+
+.temperature {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.description {
+    font-size: 16px;
+}
+
+img {
+    width: 50px;
+    height: 50px;
+}
