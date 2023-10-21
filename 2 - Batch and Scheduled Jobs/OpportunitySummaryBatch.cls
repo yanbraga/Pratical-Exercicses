@@ -33,7 +33,7 @@ global class OpportunitySummaryBatch implements Database.Batchable<sObject> {
     }
 
     // Debug Track Information
-    System.debug('Número de e-mails na lista: ' + emailList.size());
+    System.debug('N. Email on list: ' + emailList.size());
 
     // Send Email
     Messaging.sendEmail(emailList);
